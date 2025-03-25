@@ -1,3 +1,14 @@
+# docker buildx build --push --platform linux/arm64,linux/amd64 --tag us.gcr.io/gcpdrive-sjstest/pi-ci:1 .
+# This fails at the moment (1/5/2025):
+#
+# dpkg: error processing archive /tmp/apt-dpkg-install-RJ6Llq/368-libdate-manip-perl_6.95-1_all.deb (--unpack):
+# 110.7  subprocess dpkg-split returned error exit status 4
+# dpkg: error processing archive /tmp/apt-dpkg-install-RJ6Llq/429-libglapi-mesa_24.0.9-0ubuntu0.3_amd64.deb (--unpack):
+# 116.6  subprocess dpkg-split returned error exit status 4
+#
+# Bleah. I'll have to look into this later.
+#
+
 # PI-CI
 # Kernel source
 ARG KERNEL_BRANCH=rpi-6.6.y
